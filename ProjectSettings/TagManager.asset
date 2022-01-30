@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Piece
   - Board
+  - GameManager
   layers:
   - Default
   - TransparentFX

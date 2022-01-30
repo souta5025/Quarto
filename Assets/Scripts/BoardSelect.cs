@@ -23,4 +23,8 @@ public class BoardSelect : MonoBehaviour
     private void OnMouseExit() {
         transform.localScale /= 1.2f;
     }
+    //オブジェクト上で話した時
+    //private void OnMouseUpAsButton() {
+        
+    //}
 }

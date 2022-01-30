@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2360443717004766932}
   - component: {fileID: 8843852442294572408}
+  - component: {fileID: 1563170713011116815}
   - component: {fileID: 3118407906880810314}
   - component: {fileID: 368619908298196884}
   - component: {fileID: 2188861068984272688}
@@ -6329,6 +6330,18 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1563170713011116815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5384082894025761692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13718ca04e6ec43c2a127402dba0c560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &3118407906880810314
 MeshRenderer:
   m_ObjectHideFlags: 0
