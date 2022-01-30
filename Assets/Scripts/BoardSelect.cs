@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BoardSelect : MonoBehaviour
 {
+    GameManagerScript script; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        script = Common.GetGameManager();
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class BoardSelect : MonoBehaviour
         transform.localScale /= 1.2f;
     }
     //オブジェクト上で話した時
-    //private void OnMouseUpAsButton() {
+    private void OnMouseUpAsButton() {
         
-    //}
+    }
 }
