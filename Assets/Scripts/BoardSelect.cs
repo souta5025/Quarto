@@ -29,7 +29,7 @@ public class BoardSelect : MonoBehaviour
     //オブジェクト上で話した時
     private void OnMouseUpAsButton()
     {
-        var position = this.transform.position;
+        var position = transform.parent.transform.position;
         script.piece.transform.position = position;
         var layerNumber = this.gameObject.layer;
         Common.SetLayerRecursively(script.piece, layerNumber);
