@@ -31,5 +31,7 @@ public class BoardSelect : MonoBehaviour
     {
         var position = this.transform.position;
         script.piece.transform.position = position;
+        var layerNumber = this.gameObject.layer;
+        Common.SetLayerRecursively(script.piece, layerNumber);
     }
 }
