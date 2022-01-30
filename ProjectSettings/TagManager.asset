@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Piece
+  - Board
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UI 3D object
   - 
   - 
   - 
