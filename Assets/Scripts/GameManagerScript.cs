@@ -6,6 +6,8 @@ public class GameManagerScript : MonoBehaviour
 {
 
     public GameObject piece;
+    public bool selectFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(piece);
+        
     }
 }

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PieceSelect : MonoBehaviour
 {
-    GameManagerScript script; //GameManagerScriptが入る変数
+    GameManagerScript GMscript; //GameManagerScriptが入る変数
     GameObject usepiece;
+    private bool usedFlag = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        script = Common.GetGameManager();
+        GMscript = Common.GetGameManager();
         usepiece = GameObject.FindWithTag("UsePiece");
     }
 
@@ -22,9 +23,15 @@ public class PieceSelect : MonoBehaviour
     //オブジェクト上で離した時
     private void OnMouseUpAsButton()
     {
-        script.piece = transform.parent.gameObject;
-        script.piece.transform.position = usepiece.transform.position;
-        var layerNumber = usepiece.layer;
-        this.gameObject.layer = layerNumber;
+        if(GMscript.selectFlag == false){
+            if(usedFlag == false){
+                GMscript.piece = transform.parent.gameObject;
+                GMscript.piece.transform.position = usepiece.transform.position;
+                var layerNumber = usepiece.layer;
+                this.gameObject.layer = layerNumber;
+                GMscript.selectFlag = true;
+                usedFlag = true;
+            }
+        }
     }
 }
