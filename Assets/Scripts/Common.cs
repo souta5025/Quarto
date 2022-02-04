@@ -40,5 +40,4 @@ public static class Common
         return result;
     }
 
-
 }
