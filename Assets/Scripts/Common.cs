@@ -26,4 +26,11 @@ public static class Common
             SetLayerRecursively(n.gameObject, layer);
         }
     }
+
+    //public static string ConvertBinaryNumber(string pieceName){
+        //switch{
+          //  (when str.Contains())
+        //}
+    //}
+
 }

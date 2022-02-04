@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardSelect : MonoBehaviour
 {
     GameManagerScript GMscript;
-    private bool onPieceFlag = false;
+    //private bool onPieceFlag = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,15 +30,13 @@ public class BoardSelect : MonoBehaviour
     //オブジェクト上で話した時
     private void OnMouseUpAsButton()
     {
-        if(GMscript.selectFlag){
-            if(onPieceFlag == false){
-                var position = transform.parent.transform.position;
-                GMscript.piece.transform.position = position;
-                var layerNumber = this.gameObject.layer;
-                Common.SetLayerRecursively(GMscript.piece, layerNumber);
-                GMscript.selectFlag = false;
-                onPieceFlag = true;
-            }
+        if(GMscript.selectFlag == true){
+            var position = transform.parent.transform.position;
+            GMscript.piece.transform.position = position;
+            var layerNumber = this.gameObject.layer;
+            Common.SetLayerRecursively(GMscript.piece, layerNumber);
+            GMscript.selectFlag = false;
+            Destroy(this);
         }
     }
 }

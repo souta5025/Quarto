@@ -6,7 +6,7 @@ public class PieceSelect : MonoBehaviour
 {
     GameManagerScript GMscript; //GameManagerScriptが入る変数
     GameObject usepiece;
-    private bool usedFlag = false;
+    //private bool usedFlag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +24,12 @@ public class PieceSelect : MonoBehaviour
     private void OnMouseUpAsButton()
     {
         if(GMscript.selectFlag == false){
-            if(usedFlag == false){
-                GMscript.piece = transform.parent.gameObject;
-                GMscript.piece.transform.position = usepiece.transform.position;
-                var layerNumber = usepiece.layer;
-                this.gameObject.layer = layerNumber;
-                GMscript.selectFlag = true;
-                usedFlag = true;
-            }
+            GMscript.piece = transform.parent.gameObject;
+            GMscript.piece.transform.position = usepiece.transform.position;
+            var layerNumber = usepiece.layer;
+            this.gameObject.layer = layerNumber;
+            GMscript.selectFlag = true;
+            Destroy(this);
         }
     }
 }
