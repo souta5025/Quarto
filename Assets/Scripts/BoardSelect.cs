@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System;
 
 public class BoardSelect : MonoBehaviour
 {
@@ -36,6 +38,16 @@ public class BoardSelect : MonoBehaviour
             var layerNumber = this.gameObject.layer;
             Common.SetLayerRecursively(GMscript.piece, layerNumber);
             GMscript.selectFlag = false;
+            //配置場所の記憶
+            var numbers = transform.parent.name.Split(',').Select(x => int.Parse(x)).ToArray();
+            var i = numbers[0];
+            var j = numbers[1];
+            GMscript.stage[i,j] = Common.ConvertBinaryNumber(GMscript.piece.name);
+            for(i=0; i<4; i++){
+                for(j=0; j<4; j++){
+                    Debug.Log(Convert.ToString(GMscript.stage[i,j], 2));
+                }
+            }
             Destroy(this);
         }
     }

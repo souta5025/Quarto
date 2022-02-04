@@ -27,10 +27,18 @@ public static class Common
         }
     }
 
-    //public static string ConvertBinaryNumber(string pieceName){
-        //switch{
-          //  (when str.Contains())
-        //}
-    //}
+    public static byte ConvertBinaryNumber(string pieceName){
+        byte result = 0;
+        if(pieceName.Contains("Light")) result |= 0b00000001;
+        if(pieceName.Contains("Dark"))  result |= 0b00000010;
+        if(pieceName.Contains("Round")) result |= 0b00000100;
+        if(pieceName.Contains("Square"))result |= 0b00001000;
+        if(pieceName.Contains("Tall"))  result |= 0b00010000;
+        if(pieceName.Contains("Short")) result |= 0b00100000;
+        if(pieceName.Contains("Solid")) result |= 0b01000000;
+        if(pieceName.Contains("Hollow"))result |= 0b10000000;
+        return result;
+    }
+
 
 }
