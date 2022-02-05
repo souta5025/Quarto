@@ -29,6 +29,12 @@ public class PieceSelect : MonoBehaviour
             var layerNumber = usepiece.layer;
             this.gameObject.layer = layerNumber;
             GMscript.selectFlag = true;
+            if(GMscript.beforeQuartoNumber != GMscript.CheckQuarto()){ //見逃しがあるかの判定
+                GMscript.missFlag = true;
+            }else{
+                GMscript.missFlag = false;
+            }
+            GMscript.beforeQuartoNumber = GMscript.CheckQuarto(); //見逃しているQuartoの数の保存
             Destroy(this);
         }
     }

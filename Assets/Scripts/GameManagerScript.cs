@@ -8,6 +8,8 @@ public class GameManagerScript : MonoBehaviour
     public GameObject piece;
     public bool selectFlag = false;
     public byte[,] stage = new byte[STAGE_SIZE,STAGE_SIZE]; //置かれた駒の記憶
+    public int beforeQuartoNumber = 0;
+    public bool missFlag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
-    public int CheckQuart(){
+    public int CheckQuarto(){
         int cnt = 0;
         for(var i = 0; i < STAGE_SIZE; i++){
             var tmp = stage[i,0];

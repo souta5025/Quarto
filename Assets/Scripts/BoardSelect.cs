@@ -7,7 +7,7 @@ using System;
 public class BoardSelect : MonoBehaviour
 {
     GameManagerScript GMscript;
-    //private bool onPieceFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +43,7 @@ public class BoardSelect : MonoBehaviour
             var i = numbers[0];
             var j = numbers[1];
             GMscript.stage[i,j] = Common.ConvertBinaryNumber(GMscript.piece.name);
-            Debug.Log(GMscript.CheckQuart());
-            // for(i=0; i<4; i++){
-            //     for(j=0; j<4; j++){
-            //         Debug.Log(Convert.ToString(GMscript.stage[i,j], 2));
-            //     }
-            // }
+            //Debug.Log(GMscript.CheckQuarto());
             Destroy(this);
         }
     }
