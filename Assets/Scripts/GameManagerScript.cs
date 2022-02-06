@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour
     private GameObject usepiece;
     //ターン表示テキスト
     public Text turn;
+    public GameObject endCanvas;
 
     public Subject<(Vector3 , int, int[])> boardSubject = new Subject<(Vector3, int, int[])>();
     public Subject<GameObject> pieceSubject = new Subject<GameObject>();
@@ -72,7 +73,11 @@ public class GameManagerScript : MonoBehaviour
                     return;
                 }
             }
-            Debug.Log("Quarto!");
+            var playCanvas = GameObject.Find("PlayCanvas");
+            playCanvas.SetActive(false);
+            endCanvas.SetActive(true);
+            ScriptDestroy<BoardSelect>("Board");
+            ScriptDestroy<PieceSelect>("Piece");
         });
 
     }
@@ -136,4 +141,10 @@ public class GameManagerScript : MonoBehaviour
         turn.text = player.ToString() + "Pは駒を選択してください";
     }
 
+    private void ScriptDestroy<T>(string name)where T: UnityEngine.Object{
+        GameObject[] objects = GameObject.FindGameObjectsWithTag(name);
+        foreach(GameObject obj in objects){
+            Destroy(obj.GetComponent<T>());
+        }
+    }
 }
