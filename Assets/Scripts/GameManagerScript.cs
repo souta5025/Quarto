@@ -22,6 +22,8 @@ public class GameManagerScript : MonoBehaviour
     public Subject<GameObject> pieceSubject = new Subject<GameObject>();
     public Subject<int> buttonSubject = new Subject<int>();
 
+    private float scale = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class GameManagerScript : MonoBehaviour
             var(position, layerNumber, numbers) = input;             //タプルを展開
             piece.transform.position = position;        //駒を選んだボードの位置に移動
             Common.SetLayerRecursively(piece, layerNumber);  //駒のレイヤーを元に戻す
+            // piece.transform.localScale /= scale;
             selectFlag = false;                           //駒の選択が切れたことを記録
             //配置場所の記憶
             var i = numbers[0];
@@ -48,6 +51,7 @@ public class GameManagerScript : MonoBehaviour
             piece.transform.position = usepiece.transform.position; //UI上に移動
             var layerNumber = usepiece.layer;                     //UIlayerの取得
             Common.SetLayerRecursively(piece, layerNumber); //layerを変更してUIに表示
+            // piece.transform.localScale *= scale;
             selectFlag = true;                           //駒を選択したことを記録
             //前の手番で見逃しがあるかの判定
             if(beforeQuartoNumber != CheckQuarto()){
