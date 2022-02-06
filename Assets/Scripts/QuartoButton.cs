@@ -13,12 +13,13 @@ public class QuartoButton : MonoBehaviour
     // ボタンが押された場合,呼び出される関数
     public void OnClick()
     {
-        if(GMscript.beforeQuartoNumber == GMscript.CheckQuarto()){
-            if(GMscript.missFlag == false){
-                Debug.Log("Not Quarto");
-                return;
-            }
-        }
-        Debug.Log("Quarto!");
+        GMscript.buttonSubject.OnNext(0);
+        // if(GMscript.beforeQuartoNumber == GMscript.CheckQuarto()){
+        //     if(GMscript.missFlag == false){
+        //         Debug.Log("Not Quarto");
+        //         return;
+        //     }
+        // }
+        // Debug.Log("Quarto!");
     }
 }
