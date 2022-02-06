@@ -45,6 +45,7 @@ public class BoardSelect : MonoBehaviour
             GMscript.stage[i,j] = Common.ConvertBinaryNumber(GMscript.piece.name);
             //手番のテキストの変更
             Common.ChangeSelectText(GMscript.CurrentPlayer);
+            GMscript.missFlag = false;
             Destroy(this);
         }
     }
