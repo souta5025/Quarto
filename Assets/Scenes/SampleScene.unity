@@ -2070,6 +2070,8 @@ MonoBehaviour:
   selectFlag: 0
   beforeQuartoNumber: 0
   missFlag: 0
+  CurrentPlayer: 2
+  turn: {fileID: 884450464}
 --- !u!4 &845527161
 Transform:
   m_ObjectHideFlags: 0
@@ -2128,8 +2130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166, y: 157}
-  m_SizeDelta: {x: 250, y: 50}
+  m_AnchoredPosition: {x: -130, y: 172}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884450464
 MonoBehaviour:
@@ -2164,7 +2166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1P\u306E\u756A\u3067\u3059"
+  m_Text: New Text
 --- !u!222 &884450465
 CanvasRenderer:
   m_ObjectHideFlags: 0

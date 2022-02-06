@@ -43,7 +43,8 @@ public class BoardSelect : MonoBehaviour
             var i = numbers[0];
             var j = numbers[1];
             GMscript.stage[i,j] = Common.ConvertBinaryNumber(GMscript.piece.name);
-            //Debug.Log(GMscript.CheckQuarto());
+            //手番のテキストの変更
+            Common.ChangeSelectText(GMscript.CurrentPlayer);
             Destroy(this);
         }
     }
