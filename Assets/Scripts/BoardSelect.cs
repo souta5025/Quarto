@@ -29,7 +29,7 @@ public class BoardSelect : MonoBehaviour
     {
         transform.localScale /= 1.2f;
     }
-    //オブジェクト上で話した時
+    //オブジェクト上で離した時
     private void OnMouseUpAsButton()
     {
         if(GMscript.selectFlag == true){
