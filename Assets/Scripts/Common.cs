@@ -40,18 +40,4 @@ public static class Common
         return result;
     }
 
-    // public static void ChangePlayer(){
-    //     var GMscript = GetGameManager();
-    //     if(GMscript.CurrentPlayer == 1){
-    //         GMscript.CurrentPlayer = 2;
-    //     }else{
-    //         GMscript.CurrentPlayer = 1;
-    //     }
-    // }
-
-    // public static void ChangeSelectText(int player){
-    //     var GMscript = GetGameManager();
-    //     GMscript.turn.text = player.ToString() + "Pは駒を選択してください";
-    // }
-
 }

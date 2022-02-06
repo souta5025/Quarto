@@ -14,12 +14,5 @@ public class QuartoButton : MonoBehaviour
     public void OnClick()
     {
         GMscript.buttonSubject.OnNext(0);
-        // if(GMscript.beforeQuartoNumber == GMscript.CheckQuarto()){
-        //     if(GMscript.missFlag == false){
-        //         Debug.Log("Not Quarto");
-        //         return;
-        //     }
-        // }
-        // Debug.Log("Quarto!");
     }
 }
