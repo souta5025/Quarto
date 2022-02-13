@@ -18,6 +18,7 @@ public class GameManagerScript : MonoBehaviour
     //ターン表示テキスト
     public Text turn;
     public GameObject endCanvas;
+    public GameObject resultObject;
 
     public Subject<(Vector3 , int, int[])> boardSubject = new Subject<(Vector3, int, int[])>();
     public Subject<GameObject> pieceSubject = new Subject<GameObject>();
@@ -76,6 +77,9 @@ public class GameManagerScript : MonoBehaviour
             var playCanvas = GameObject.Find("PlayCanvas");
             playCanvas.SetActive(false);
             endCanvas.SetActive(true);
+            // オブジェクトからTextコンポーネントを取得
+            Text result = resultObject.GetComponent<Text> ();
+            result.text = CurrentPlayer.ToString() + "Pの勝ちです";
             ScriptDestroy<BoardSelect>("Board");
             ScriptDestroy<PieceSelect>("Piece");
         });
